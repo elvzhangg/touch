@@ -1,0 +1,419 @@
+body {
+  background: #2F2F2F;
+  margin: 0;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.title {
+  font-family: 'sf_ui_displayregular';
+  letter-spacing: 0.5px; 
+  font-size: 25px;
+}
+
+.sub-title {
+  font-size: 23px; 
+  letter-spacing: 0.5px;
+}
+
+/*=======================================*/
+                  /*Home*/
+/*=======================================*/
+
+.home-section {
+  position: fixed; 
+  color: white;
+  height: 100%;
+  width: 100%;
+  display: inline-block; 
+}
+
+.hide-home-section {
+  left: -100%;
+}
+
+#home .container {
+  position: relative;
+  padding-top: 25px;
+  height: 100%;
+}
+
+#stat-image {
+  width: 90%;
+  position: absolute;
+  top: 50%; 
+  transform: translateY(-50%); 
+}
+
+.circle-status {
+  width: 300px; 
+  height: 300px;
+  position: absolute;
+  top: 24%;
+  left: 10%;  
+  transform: translate(-50%, -50%);
+  background: #375ED6;
+  border-radius: 100%;
+  list-style: none;
+}
+
+.circle-status .layer img {
+  width: 170px;
+  position: absolute;
+  top: 50%;
+  left: 50%;  
+  transform: translate(-50%, -50%);
+}
+
+.circle-status .one img {
+  left: 158px; 
+  top: 145px; 
+  width: 170px;
+}
+
+.circle-status .two img {
+  left: 173px; 
+  top: 105px; 
+  width: 120px;
+}
+.circle-status .three img {
+  left: 157px; 
+  top: 145px; 
+  width: 190px;
+}
+
+.circle-status .four img {
+  left: 131px; 
+  top: 200px; 
+  width: 100px;
+}
+
+.bottom-bar {
+  width: 100%; 
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-bottom: 15px;
+  text-align: right;
+}
+
+#bottom-text {
+  text-align: left;
+}
+#today {
+  display: inline-block;
+  margin-bottom: 0; 
+  line-height: 0;
+  text-align: left;
+}
+
+#draw-button {
+  text-align: right;
+  float: right;
+  text-decoration: none;
+  color: white; 
+}
+
+#cv{
+  position: fixed;
+  left: 0; 
+  top: 0; 
+  filter: blur(10px); 
+}
+
+
+/*=======================================*/
+                  /*Draw*/
+/*=======================================*/
+.draw-section {
+  position: fixed; 
+  width: 100%; 
+  height: 100%; 
+  top: 0; 
+  right: -100%;
+  transition: 0.4s all cubic-bezier(0.645, 0.045, 0.355, 1);
+  z-index: 999;
+}
+
+.show-draw-section {
+  right: 0; 
+}
+
+.side-bar {
+  position: absolute; 
+  top: 50%; 
+  height: 100%; 
+  right: 75px; 
+  transform: translateY(-50%); 
+  transition: 0.3s all cubic-bezier(0.645, 0.045, 0.355, 1);
+  z-index: 999;
+  opacity: 1;
+}
+
+.hide-bar {
+  right: -100px; 
+  opacity: 0;
+}
+
+.draw-tools {
+  position: absolute; 
+  top: 50%; 
+  transform: translateY(-50%);
+}
+
+.shape {
+  position: relative;
+  width: 55px;
+  height: 55px;
+  border-radius: 110px;
+  border: 2px solid white;
+  margin-bottom: 20px;
+  text-align: center;
+  line-height: 55px;
+}
+
+.shape svg {
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+}
+
+.undo {
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  top: 20px;
+  border-radius: 110px;
+  margin-bottom: 20px;
+  text-align: center;
+  line-height: 55px;
+  z-index: 999;
+}
+
+.undo svg {
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+}
+
+.finish {
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  bottom: 25px;
+  border-radius: 110px;
+  text-align: center;
+  line-height: 55px;
+  z-index: 999;
+}
+
+.exit {
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  top: 20px;
+  border-radius: 110px;
+  margin-bottom: 20px;
+  text-align: center;
+  line-height: 55px;
+  transition: 0.2s all cubic-bezier(0.645, 0.045, 0.355, 1);
+  left: 20px;
+  z-index: 9999;
+}
+
+.exit svg {
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+}
+
+.hide-exit {
+  left: -100px; 
+}
+
+.active-tool {
+  background: white; 
+}
+
+.active-tool path, .active-tool ellipse {
+  stroke: #333;
+}
+
+#draw-area {
+  background: #2F2F2F; 
+  position: absolute; 
+  left: 0; 
+  top: 0; 
+  z-index: 99;
+}
+
+#sleep, #distance, #flights, #steps {
+  display: none; 
+  opacity: 0; 
+}
+
+/*=======================================*/
+                  /*Home Finish*/
+/*=======================================*/
+#home, #draw {
+  /*display: none;*/
+}
+
+.home-finish {
+  position: fixed; 
+  color: white;
+  height: 100%;
+  width: 100%;
+  display: inline-block; 
+  right: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s all cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.show-home-finish {
+  right: 0;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#home-finish .container {
+  position: absolute;
+  padding-top: 25px;
+  left: 50%; 
+  transform: translateX(-50%);
+  height: 100%;
+}
+
+#home-finish .bottom-bar {
+  width: 100%; 
+  position: absolute;
+  bottom: 75px;
+  left: 0;
+  padding-bottom: 15px;
+  text-align: right;
+}
+
+#finish-info {
+  text-align: right;
+  float: right;
+  text-decoration: none;
+  color: white; 
+  margin-top: -10px;
+}
+
+/*=======================================*/
+                  /*Draw*/
+/*=======================================*/
+#home, #draw, #home-finish {
+  /*display: none;*/
+}
+
+.breakdown-section {
+  position: relative; 
+  display: inline-block;
+  width: 100%;
+  background: #375ED6;
+  opacity: 0; 
+  pointer-events: none;
+  overflow-y: hidden; 
+  display: none;
+  animation-delay: 2s;
+  transition: 0.3s all cubic-bezier(0.645, 0.045, 0.355, 1);
+  z-index: 9999;
+}
+
+.show-breakdown-section {
+  opacity: 1; 
+  pointer-events: auto;
+  display: inline-block;
+  overflow-y: auto;
+}
+
+.transition-circle {
+  position: fixed;
+  top: 50%; 
+  left: 48%;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  width: 20px; 
+  height: 20px; 
+  background: #375ED6;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  transition: 0.5s all cubic-bezier(0.645, 0.045, 0.355, 1);
+  z-index: 1; 
+  overflow-y: hidden; 
+}
+
+.show-circle {
+  -webkit-transform: scale(90);
+  -ms-transform: scale(90);
+  transform: scale(90);
+}
+
+.breakdown-detail {
+  padding: 25px;
+  text-align: center;
+  color: white; 
+}
+
+.breakdown-section h1 {
+  font-size: 35px;
+  color: white;
+  text-align: center;
+  padding-top: 35px;
+  margin-bottom: 30px;
+}
+
+.breakdown-detail h2 {
+  padding-top: 25px;
+  font-size: 30px; 
+  margin-bottom: 5px;
+}
+
+.breakdown-detail h3 {
+  font-size: 20px;
+}
+
+.breakdown-detail img {
+  width: 60%; 
+  margin: 0 auto; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

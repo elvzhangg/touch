@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prototype</title>
+  
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" href="./fonts/stylesheet.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+
+  <link rel="stylesheet" href="./css/home.css">
+</head>
+<body>
+
+
+  <section id="home" class="home-section">
+    <div class="container">
+      <h1 class="title">Today</h1>
+
+      <!-- <img src="./public/good.png" alt="" id="stat-image"> -->
+      <ul id="scene" class="circle-status" >
+        <li class="layer one" data-depth="0.1"><img src="./public/shapes/1.png" alt=""></li>
+        <li class="layer two" data-depth="0.2"><img src="./public/shapes/2.png" alt=""></li>
+        <li class="layer three" data-depth="0.3"><img src="./public/shapes/3.png" alt=""></li>
+        <li class="layer four" data-depth="0.4"><img src="./public/shapes/4.png" alt=""></li>
+      </ul>
+    </div>
+
+    <div class="bottom-bar">
+      <div class="container">
+        <h1 class="sub-title" id="bottom-text"><span id="today"></span> <a href="" id="draw-button">Draw</a></h1>
+      </div>
+    </div>
+  </section>
+
+  <section id="draw" class="draw-section">
+    <canvas id="draw-area"></canvas>
+
+    <img src="./public/shapes/11.png" id="steps">
+    <img src="./public/shapes/21.png" id="flights">
+    <img src="./public/shapes/31.png" id="distance">
+    <img src="./public/shapes/41.png" id="sleep">
+
+      <div class="exit" id="exit">
+        
+        <svg width="24px" height="25px" viewBox="34 47 24 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 40 (33762) - http://www.bohemiancoding.com/sketch -->
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Group-10" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(36.000000, 49.000000)" stroke-linecap="square">
+                <path d="M1.05,1.05 L20.4110434,20.4110434" id="Line" stroke="#FFFFFF" stroke-width="2"></path>
+                <path d="M1.05,1.05 L20.4110434,20.4110434" id="Line" stroke="#FFFFFF" stroke-width="2" transform="translate(10.500000, 10.500000) rotate(-270.000000) translate(-10.500000, -10.500000) "></path>
+            </g>
+        </svg>
+      </div>
+
+      <div class="side-bar" id="side-bar">
+        
+        <div class="undo" id="undo"> 
+          <svg width="39px" height="39px" viewBox="7534 2493 39 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <!-- Generator: Sketch 40 (33762) - http://www.bohemiancoding.com/sketch -->
+              <desc>Created with Sketch.</desc>
+              <defs></defs>
+              <g id="Group-8" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(7535.000000, 2494.000000)">
+                  <path d="M18.5,31.45 C25.6520875,31.45 31.45,25.6520875 31.45,18.5 C31.45,15.5477494 30.4621012,12.8262348 28.7988464,10.6479993 C26.4327198,7.54926728 22.6998369,5.55 18.5,5.55 C11.3479125,5.55 5.55,11.3479125 5.55,18.5" id="Oval-6" stroke="#FFFFFF" stroke-width="2" transform="translate(18.500000, 18.500000) rotate(-300.000000) translate(-18.500000, -18.500000) "></path>
+                  <polyline id="Path-5" stroke="#FFFFFF" stroke-width="2" transform="translate(14.148388, 6.380799) rotate(-23.000000) translate(-14.148388, -6.380799) " points="17.5705589 1.90646048 10.7262173 6.43083893 17.4191605 10.8551371"></polyline>
+              </g>
+          </svg>
+        </div> <!-- end undo -->
+        
+        <div class="draw-tools">
+          <div class="shape active-tool" id="shape1" data-img="steps" data-x="145" data-y="145" data-delay="false">
+            <svg width="28px" height="28px" viewBox="6573 3361 28 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <!-- Generator: Sketch 40 (33762) - http://www.bohemiancoding.com/sketch -->
+                <desc>Created with Sketch.</desc>
+                <defs></defs>
+                <path d="M6598.63689,3384.49673 L6574.61905,3363.08861" id="Line-Copy-6" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" fill="none" class="strokeshape"></path>
+            </svg>
+          </div>
+
+          <div class="shape" id="shape2" data-img="flights" data-x="145" data-y="145" data-delay="false">
+            <svg width="28px" height="28px" viewBox="6572 3441 28 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <!-- Generator: Sketch 40 (33762) - http://www.bohemiancoding.com/sketch -->
+                <desc>Created with Sketch.</desc>
+                <defs></defs>
+                <path d="M6591.13246,3465.78477 L6597.00912,3460.30292" id="Line-Copy" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" fill="none" class="strokeshape"></path>
+                <path d="M6573.90457,3465.78477 L6598.26512,3443.06082" id="Line-Copy-2" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" fill="none" class="strokeshape"></path>
+                <path d="M6582.51851,3465.78477 L6594.70073,3454.42098" id="Line-Copy-3" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" fill="none" class="strokeshape"></path>
+            </svg>
+          </div>
+
+          <div class="shape" id="shape3" data-img="distance" data-x="300" data-y="300" data-delay="true">
+            <svg width="30px" height="30px" viewBox="6573 3522 31 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <!-- Generator: Sketch 40 (33762) - http://www.bohemiancoding.com/sketch -->
+                <desc>Created with Sketch.</desc>
+                <defs></defs>
+                <g id="Group-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(6574.619048, 3523.614627)">
+                    <ellipse id="Oval-5-Copy-2" stroke="#FFFFFF" stroke-width="1" cx="8.33947824" cy="8.66093286" rx="4.86950003" ry="4.8869154" class="strokeshape"></ellipse>
+                    <ellipse id="Oval-5-Copy-4" stroke="#FFFFFF" stroke-width="1" cx="22.8206264" cy="21.8497166" rx="4.86950003" ry="4.8869154" class="strokeshape"></ellipse>
+                    <ellipse id="Oval-5-Copy-3" stroke="#FFFFFF" stroke-width="1" cx="3.52864688" cy="3.71513897" rx="3.22677713" ry="3.23831743" class="strokeshape"></ellipse>
+                </g>
+            </svg>
+          </div>
+
+          <div class="shape" id="shape4" data-img="sleep" data-x="301" data-y="301" data-delay="true">
+            <svg width="50px" height="50px" viewBox="6568 3596 44 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <!-- Generator: Sketch 40 (33762) - http://www.bohemiancoding.com/sketch -->
+                <desc>Created with Sketch.</desc>
+                <defs></defs>
+                <g id="Group-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(6570.833333, 3598.219409)" class="strokeshape">
+                    <g id="Group-2-Copy" transform="translate(19.798574, 21.306764) rotate(-330.000000) translate(-19.798574, -21.306764) translate(7.298574, 4.806764)" stroke="#FFFFFF" stroke-width="2" class="strokeshape">
+                        <ellipse id="Oval-5-Copy-5" transform="translate(13.470736, 5.439790) rotate(-45.000000) translate(-13.470736, -5.439790) " cx="13.4707359" cy="5.43979" rx="3.47750839" ry="3.29202553" class="strokeshape"></ellipse>
+                        <ellipse id="Oval-5-Copy-6" transform="translate(17.843520, 10.592180) rotate(-45.000000) translate(-17.843520, -10.592180) " cx="17.8435203" cy="10.5921803" rx="3.47750839" ry="3.29202553" class="strokeshape"></ellipse>
+                        <ellipse id="Oval-5-Copy-7" transform="translate(19.487350, 17.001121) rotate(-45.000000) translate(-19.487350, -17.001121) " cx="19.4873498" cy="17.0011214" rx="3.47750839" ry="3.29202553" class="strokeshape"></ellipse>
+                        <ellipse id="Oval-5-Copy-8" transform="translate(17.623697, 23.421634) rotate(-45.000000) translate(-17.623697, -23.421634) " cx="17.6236973" cy="23.4216336" rx="3.47750839" ry="3.29202553" class="strokeshape"></ellipse>
+                        <ellipse id="Oval-5-Copy-9" transform="translate(12.093870, 27.517030) rotate(-45.000000) translate(-12.093870, -27.517030) " cx="12.0938703" cy="27.5170298" rx="3.47750839" ry="3.29202553" class="strokeshape"></ellipse>
+                        <ellipse id="Oval-5-Copy-10" transform="translate(5.142967, 27.532417) rotate(-45.000000) translate(-5.142967, -27.532417) " cx="5.14296747" cy="27.5324166" rx="3.47750839" ry="3.29202553" class="strokeshape"></ellipse>
+                    </g>
+                </g>
+            </svg>
+          </div>
+        </div> <!-- end draw-tools -->
+        
+        <div class="finish" id="finish">      
+          <svg width="58px" height="58px" viewBox="6578 3120 58 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <!-- Generator: Sketch 40 (33762) - http://www.bohemiancoding.com/sketch -->
+              <desc>Created with Sketch.</desc>
+              <defs></defs>
+              <g id="Group-9-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(6578.000000, 3120.000000)">
+                  <circle id="Oval-3" fill="#5D6FCD" cx="28.5" cy="28.5" r="28.5"></circle>
+                  <polyline id="Path-4" stroke="#FFFFFF" stroke-width="2" points="14.000909 28.709908 23.8993159 38 43 19.419816"></polyline>
+              </g>
+          </svg>  
+        </div>
+      </div> <!-- end sidebar -->
+  </section>
+
+  <section id="home-finish" class="home-finish">
+    <div class="container">
+      <h1 class="title">Today</h1>
+    </div>
+
+    <div class="bottom-bar">
+      <div class="container">
+        <h1 class="sub-title" id="bottom-text"><span id="today-update"></span> <a href="" id="finish-info">
+          <svg width="43px" height="43px" viewBox="299 604 43 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <defs>
+                  <rect id="path-1" x="0" y="0" width="43" height="43" rx="21.5"></rect>
+                  <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="43" height="43" fill="white">
+                      <use xlink:href="#path-1"></use>
+                  </mask>
+              </defs>
+              <g id="Group" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(299.000000, 604.000000)">
+                  <use id="Rectangle" stroke="#FFFFFF" mask="url(#mask-2)" stroke-width="6" xlink:href="#path-1"></use>
+                  <text id="i" opacity="0.982276119" font-family="sf_ui_displayregular" font-size="22" font-weight="400" fill="#FFFFFF">
+                      <tspan x="19.0561523" y="29">i</tspan>
+                  </text>
+              </g>
+          </svg>
+        </a></h1>
+      </div>
+    </div>
+  </section>
+  
+  <div id="transition-circle" class="transition-circle"></div>
+
+  <section id="breakdown" class="breakdown-section">
+    <h1 class="title">Today's Breakdown</h1>
+    <div class="breakdown-detail">
+      <img src="./public/shapes/22.png" alt="">
+      <h2>4 flights climbed</h2>
+      <h3>Average: 4 flights</h3>
+    </div>
+
+    <div class="breakdown-detail">
+      <img src="./public/shapes/12.png" alt="">
+      <h2>4, 399 Steps taken</h2>
+      <h3>Average: 4, 500 steps</h3>
+    </div>
+
+    <div class="breakdown-detail">
+      <img src="./public/shapes/32.png" alt="">
+      <h2>3.36km travelled</h2>
+      <h3>Average: 3.4km</h3>
+    </div>
+
+    <div class="breakdown-detail">
+      <img src="./public/shapes/42.png" alt="">
+      <h2>6 hours slept</h2>
+      <h3>Average: 8 hours</h3>
+    </div>
+
+    <div class="breakdown-detail">
+      <h3 id="close-breakdown">Close Breakdown</h3>
+    </div>
+  </section>
+
+<script src="./js/parallax.js"></script>
+<script src="./js/main.js"></script>
+<!-- <script src="./js/blob.js"></script> -->
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

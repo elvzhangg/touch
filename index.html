@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reshape</title>
+  
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="apple-touch-icon" href="./public/appicon.png?v=2">
+  <link rel="stylesheet" href="./fonts/stylesheet.css">
+  <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Heebo" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="./css/home.css?v=2">
+
+</head>
+<body>
+
+
+  <canvas id="flights-draw-area"></canvas>
+  <img src="./public/shapedraw2.png?v=2" id="allShape">
+  <img src="./public/drawTools/distanceShape.png" id="distanceShape">
+  <img src="./public/drawTools/stairsShape.png" id="stairsShape">
+  <img src="./public/drawTools/stepsShape.png" id="stepsShape">
+  
+  <div class="title-container" id="titleContainer" opacity: 0;> <!-- .container -->
+    <h1 class="title" id="title">Today</h1>
+  </div> <!-- end .container -->
+  
+  <div class="gallery">
+    <div class="todayDrawingContainer todaysHealth">
+      <img src="" class="todayDrawing">
+      <p class="galleryDate">Today</p>
+    </div>
+    <div class="todayDrawingContainer">
+      <img src="./public/gallery/day2.png" class="">
+      <p class="galleryDate">Dec 7</p>
+    </div>
+    <div class="todayDrawingContainer">
+      <img src="./public/gallery/day1.png" class="">
+      <p class="galleryDate">Dec 6</p>
+    </div>
+  </div>
+
+  <div class="galleryNav">
+    <ul>
+      <li> 
+                
+        <svg width="26px" height="28px" viewBox="815 674 26 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 40 (33762) - http://www.bohemiancoding.com/sketch -->
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <path d="M826.313674,675.107398 C825.497386,675.107398 824.83097,675.773811 824.83097,676.590102 L824.83097,678.323013 C823.422282,678.790886 822.15457,679.555763 821.087142,680.537802 L819.56737,679.694514 C818.85324,679.298436 817.942979,679.555428 817.547186,680.269062 L815.823542,683.382735 C815.428668,684.094759 815.673996,685.006474 816.388838,685.402919 L817.90861,686.246222 C817.793137,686.866378 817.71399,687.502073 817.71399,688.155204 C817.71399,688.811122 817.792158,689.441509 817.90861,690.064185 L816.388838,690.907459 C815.674026,691.303934 815.428668,692.206367 815.823542,692.918391 L817.547186,696.03207 C817.942979,696.745695 818.85324,697.011959 819.56737,696.61587 L821.087142,695.772596 C822.154481,696.754443 823.42246,697.510296 824.83097,697.978119 L824.83097,699.720296 C824.83097,700.536584 825.497386,701.203 826.313674,701.203 L829.872164,701.203 C830.688452,701.203 831.354868,700.536584 831.354868,699.720296 L831.354868,697.978119 C832.763378,697.510296 834.031387,696.754443 835.098696,695.772596 L836.618468,696.61587 C837.332627,697.011959 838.24286,696.745695 838.638653,696.03207 L840.362296,692.918391 C840.7572,692.206367 840.511812,691.303934 839.797,690.907459 L838.277229,690.064185 C838.393651,689.441509 838.471848,688.811122 838.471848,688.155204 C838.471848,687.502073 838.392672,686.866378 838.277229,686.246222 L839.797,685.402919 C840.511812,685.006474 840.7572,684.094759 840.362296,683.382735 L838.638653,680.269059 C838.24286,679.555428 837.332627,679.298436 836.618468,679.694511 L835.098696,680.537799 C834.031298,679.555763 832.763556,678.790886 831.354868,678.32301 L831.354868,676.590099 C831.354868,675.773811 830.688452,675.107395 829.872164,675.107395 L826.313674,675.107395 L826.313674,675.107398 Z M826.313674,675.70048 L829.872164,675.70048 C830.370145,675.70048 830.761787,676.092118 830.761787,676.590102 L830.761787,678.517618 C830.764752,678.642506 830.855019,678.76052 830.974911,678.795625 C832.457585,679.250649 833.785287,680.054005 834.876291,681.103083 C834.967181,681.191704 835.117734,681.211516 835.228433,681.149418 L836.915009,680.213461 C837.350212,679.972088 837.878055,680.120632 838.119706,680.556336 L839.84335,683.670024 C840.08592,684.107362 839.934981,684.642974 839.50046,684.883973 L837.813913,685.819945 C837.708612,685.882455 837.650104,686.015069 837.674895,686.135019 C837.811215,686.785571 837.878767,687.462988 837.878767,688.155204 C837.878767,688.847389 837.811215,689.515555 837.674895,690.166106 C837.645834,690.288726 837.705112,690.426914 837.813913,690.490463 L839.50046,691.426405 C839.93501,691.667404 840.08592,692.193793 839.84335,692.631102 L838.119706,695.744781 C837.878055,696.180488 837.350212,696.338307 836.915009,696.096923 L835.228433,695.160981 C835.117734,695.098885 834.967181,695.118694 834.876291,695.207301 C833.785287,696.256373 832.457555,697.05048 830.974911,697.505492 C830.852113,697.541492 830.76063,697.664794 830.761787,697.792781 L830.761787,699.720296 C830.761787,700.218277 830.370145,700.609919 829.872164,700.609919 L826.313674,700.609919 C825.815693,700.609919 825.424052,700.218277 825.424052,699.720296 L825.424052,697.792781 C825.424052,697.664794 825.333725,697.541522 825.210928,697.505492 C823.728224,697.05048 822.400581,696.256373 821.309548,695.207301 C821.218658,695.118694 821.068104,695.098885 820.957405,695.160981 L819.270829,696.096923 C818.835626,696.338307 818.307783,696.180488 818.066132,695.744781 L816.342488,692.631102 C816.099948,692.193793 816.250828,691.667404 816.685379,691.426405 L818.371925,690.490463 C818.480726,690.426914 818.539945,690.288696 818.510943,690.166106 C818.374653,689.515555 818.307071,688.847389 818.307071,688.155204 C818.307071,687.462988 818.374653,686.785571 818.510943,686.135019 C818.535853,686.015069 818.477227,685.882485 818.371925,685.819945 L816.685379,684.883973 C816.250828,684.642974 816.099948,684.107362 816.342488,683.670024 L818.066132,680.556336 C818.307783,680.120632 818.835626,679.972088 819.270829,680.213461 L820.957405,681.149418 C821.068104,681.211516 821.218658,681.191704 821.309548,681.103083 C822.400551,680.054005 823.728224,679.250646 825.210928,678.795625 C825.33076,678.760508 825.421264,678.6425 825.424052,678.517618 L825.424052,676.590102 C825.424052,676.092118 825.815693,675.70048 826.313674,675.70048 L826.313674,675.70048 Z M828.092919,682.520919 C824.984726,682.520919 822.458643,685.046952 822.458643,688.155204 C822.458643,691.263396 824.984726,693.78948 828.092919,693.78948 C831.201142,693.78948 833.727195,691.263396 833.727195,688.155204 C833.727195,685.046952 831.201142,682.520919 828.092919,682.520919 L828.092919,682.520919 Z M828.092919,683.11401 C830.880611,683.11401 833.134113,685.367483 833.134113,688.155204 C833.134113,690.942865 830.880611,693.196398 828.092919,693.196398 C825.305228,693.196398 823.051725,690.942865 823.051725,688.155204 C823.051725,685.367483 825.305228,683.11401 828.092919,683.11401 L828.092919,683.11401 Z" id="Shape" stroke="#000000" stroke-width="0.5" fill="#1A1A1A" fill-rule="evenodd"></path>
+        </svg>
+      </li>
+    </ul>
+  </div>
+
+  <!-- <img src="./public/onboard.png?v=2" alt="" id="onboard" class="onboard"> -->
+  <div class="onboard" id="onboard">
+    <svg width="30px" height="30px" viewBox="83 303 30 30" class="animateShape" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+        <defs></defs>
+        <g id="Group-3-Copy-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(84.000000, 304.000000)">
+            <circle id="Oval-2-Copy" fill="#FFFFFF" cx="14" cy="14" r="8"></circle>
+            <circle id="Oval-2-Copy" stroke="#FFFFFF" stroke-linejoin="round" stroke-dasharray="4" cx="14" cy="14" r="14"></circle>
+        </g>
+    </svg>
+     <svg  width="191px" height="133px" viewBox="0 0 191 133" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <path class="path" d="M94.0497258,369.785564 C94.0497258,369.785564 140.986829,332.785564 167.560194,332.785564 C194.13356,332.785564 210.248149,365.948027 241.524078,365.948027 C272.800006,365.948027 291.106102,336.184632 291.106102,336.184632" id="Path-2" stroke="#979797" stroke-width="1" stroke-linecap="round" fill="none" transform="translate(192.577914, 351.285564) rotate(-353.000000) translate(-192.577914, -351.285564) "></path>
+    </svg>
+  </div>
+
+ 
+
+  <div class="undoBtn" id="undo" >
+    
+    <svg width="32px" height="32px" viewBox="766 671 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs></defs>
+        <g id="Group-13" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(766.000000, 671.000000)">
+            <path d="M16,27.2 C22.1855892,27.2 27.2,22.1855892 27.2,16 C27.2,13.4467021 26.345601,11.0929599 24.9071104,9.20908052 C22.8607307,6.52909603 19.6322913,4.8 16,4.8 C9.8144108,4.8 4.8,9.8144108 4.8,16" id="Oval-6" stroke="#FFFFFF" transform="translate(16.000000, 16.000000) rotate(-300.000000) translate(-16.000000, -16.000000) "></path>
+            <polyline id="Path-5" stroke="#FFFFFF" transform="translate(12.236444, 5.518529) rotate(-23.000000) translate(-12.236444, -5.518529) " points="15.196159 1.64883069 9.27672846 5.56180664 15.0652199 9.38822667"></polyline>
+        </g>
+    </svg>
+  </div>
+
+  <div class="infoBtn"> 
+    <svg width="1px" height="16px" viewBox="723 654 1 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="openInfo">
+        <defs></defs>
+        <path d="M723.873563,658.057544 L723,658.057544 L723,669.098345 C723,669.233814 723.057471,669.346706 723.126437,669.346706 L724,669.346706 L724,658.283328 C724,658.147858 723.942529,658.057544 723.873563,658.057544 L723.873563,658.057544 Z M723.873563,654 L723,654 L723,655.763441 C723,655.892473 723.057471,656 723.126437,656 L724,656 L724,654.236559 C724,654.107527 723.942529,654 723.873563,654 L723.873563,654 Z" id="i" stroke="none" fill="#FFFFFF" fill-rule="evenodd"></path>
+    </svg>
+
+        
+    <svg width="17px" height="17px" viewBox="733 653 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="closeInfo hideInfoIcon">
+        <defs></defs>
+        <path d="M734.68,654.758333 L748.12,668.158333" id="Line" stroke="#FFFFFF" stroke-width="1" stroke-linecap="square" fill="none"></path>
+        <path d="M734.68,654.758333 L748.12,668.158333" id="Line" stroke="#FFFFFF" stroke-width="1" stroke-linecap="square" fill="none" transform="translate(741.400000, 661.458333) rotate(-270.000000) translate(-741.400000, -661.458333) "></path>
+    </svg>
+  </div>
+
+  <div class="toolBtn">
+    <img src="./public/drawTools/all.png" class="all activeTool" alt="">
+    <img src="./public/drawTools/stairs.png" class="stairs" alt="">
+    <img src="./public/drawTools/steps.png" class="steps" alt="">
+    <img src="./public/drawTools/distance.png" class="distance" alt="">
+  </div>
+
+  <div class="breakdown">
+    <h1 class="health-data">7589 Steps Taken</h1>
+    <img src="./public/stepsOnly.png" class="stepsOnly breakdownImage showBreakdownImg">
+    <img src="./public/distanceOnly.png" class="distanceOnly breakdownImage">
+    <img src="./public/stairsOnly.png" class="stairsOnly breakdownImage">
+    <img src="./public/unknown4.png" class="unknown4 breakdownImage">
+
+    <div class="buttons">
+      <div class="detailbtn showBreakdownDetail" data-img="stepsOnly" data-health="7589 Steps Taken">
+        <a href="#">Steps</a>
+      </div>
+
+      <div class="detailbtn" data-img="distanceOnly" data-health="4km Travelled">
+        <a href="#">Distance</a>
+      </div>
+
+      <div class="detailbtn" data-img="stairsOnly" data-health="4 Flights of Stairs">
+        <a href="#">Stairs</a>
+      </div>
+
+      <div class="detailbtn" data-img="unknown4" data-health="Sleep not synced">
+        <a href="#">Sleep</a>
+      </div>
+
+      <div class="detailbtn" data-img="unknown4" data-health="Calories not synced">
+        <a href="#">Calories</a>
+      </div>
+    </div>
+  </div>
+  
+  <script src="./js/anime.js"></script>
+  <script src="./js/main.js?v=2"></script>
+
+  <script>
+    var path = anime.path('.path');
+    anime({
+      targets: '.animateShape',
+      translateX: path,
+      translateY: path,
+      duration: 3000,
+      loop: true,
+      opacity: 0,
+      easing: 'easeOutCirc'
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

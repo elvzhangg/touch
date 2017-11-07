@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prototype</title>
+  
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" href="./fonts/stylesheet.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="./css/home.css">
+</head>
+<body>
+
+<!-- OK BRO HERE WE GO -->
+<!-- MAKE AN ANIMATION AND PLAY WITH MOTION WHERE THE BALL LEAVE THE SCREEN WHEN YOU HOLD. -->
+<!-- AND YOU GET TO START DRAWING WHEN YOU MOVE WHILE STILL HOLDING -->
+
+  <canvas id="flights-draw-area"></canvas>
+  <img src="./public/2.png" id="flightShape">
+
+  <section id="home" class="home-section">
+
+    <div class="container"> <!-- .container -->
+      <h1 class="title" id="title">Today</h1>
+      <div class="shape-container"> <!-- .shape-container -->
+
+        <img src="./public/homeshapes/steps.png" id="steps" class="shape steps">
+        <audio src="./public/audio/Mixdown.wav" id="stepSound" class="sound"></audio>
+
+        <img src="./public/homeshapes/sleep.png" id="sleep" class="shape sleep">
+        <audio src="./public/audio/percussion.wav" id="stepSound" class="sound"></audio>
+
+        <img src="./public/homeshapes/distance.png" id="distance" class="shape distance">
+        <audio src="./public/audio/master.mp3" id="stepSound" class="sound"></audio>
+
+        <img src="./public/homeshapes/flights.png" id="flights" class="shape flights"> 
+        <audio src="./public/audio/snare.wav" id="stepSound" class="sound"></audio>
+      </div> <!-- end .shape-container -->
+    </div> <!-- end .container -->
+
+    <div class="bottom-bar">
+      <div class="container">
+        <h1 class="sub-title" id="bottom-text"><span id="today" class="today"></span></h1>
+      </div>
+    </div>    
+  </section>
+
+  <!-- <section id="flightDraw" class="draw-section">
+    <canvas id="flights-draw-area"></canvas>
+    <img src="./public/2.png" id="flightShape">
+  </section>
+
+  <section id="distanceDraw" class="draw-section ">
+    <canvas id="distance-draw-area"></canvas>
+      <svg width="73px" height="71px" viewBox="-3180 3591 73 71" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="distanceShape">
+          <desc>Created with Sketch.</desc>
+          <defs></defs>
+          <ellipse id="Oval-5-Copy-2" stroke="none" fill="#D8D8D8" fill-rule="evenodd" cx="-3158.55631" cy="3613.27121" rx="12.8981172" ry="13.0661706"></ellipse>
+          <ellipse id="Oval-5-Copy-4" stroke="none" fill="#D8D8D8" fill-rule="evenodd" cx="-3120.22288" cy="3648.82293" rx="12.8981172" ry="13.0661706"></ellipse>
+          <ellipse id="Oval-5-Copy-3" stroke="none" fill="#D8D8D8" fill-rule="evenodd" cx="-3171.28499" cy="3600.42301" rx="8.54694513" ry="8.6583058"></ellipse>
+      </svg>
+  </section> -->
+
+  
+<!-- <script src="./js/parallax.js"></script> -->
+<script src="./js/draw.js"></script>
+<script src="./js/main.js"></script>
+<!-- <script src="./js/distance.js"></script> -->
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
